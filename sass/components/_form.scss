@@ -1,0 +1,93 @@
+.form{
+
+  &_group:not(:last-child){
+    margin-bottom: 3rem;
+
+  }
+
+
+  &_input{
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    font-family: inherit;
+    color: inherit;
+    border-radius: .2rem;
+    background-color: rgba(255,255,255,.5);
+    border: none;
+    border-bottom: 3px solid transparent;
+    width: 70%;
+    display: block;
+    transition: all .7s;
+    &:focus{
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
+      border-bottom: 3px solid #79AC20;
+      &:invalid{
+        border-bottom: 3px solid $c-or2;
+      }
+    }
+    &::-webkit-input-placeholder{
+      color: grey;
+    }
+
+  }
+  &_label{
+    font-size: 1.2rem;
+    color: black;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: .7rem;
+    transition: all .7s;
+  }
+  &_input:placeholder-shown + &_label{ //"+"= adding the next sibling element which is label
+    visibility:hidden;
+    opacity: 0;
+    transform: translateY(-4rem);
+  }
+
+  &_radio-group{
+    width: 20rem;
+    display: inline-block;
+
+  }
+  &_radio-label{
+    font-size: $default-font;
+    cursor: pointer;
+    position: relative;
+    padding-left: 5rem;
+  }
+  &_radio-input{
+    display: none;
+  }
+
+
+     //-----------------------creation of button----------------------
+  &_radio-button{
+    height: 2rem;
+    width: 2rem;
+    border: 5px solid $c-or2;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: -.5rem;
+    left: 0rem;
+    &::after{
+      content: "";
+      display: block;
+      height: 1.3rem;
+      width: 1.3rem;
+      border-radius: 50%;
+      position: absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+      background-color: $c-or2;
+      opacity: 0;
+      transition: opacity .5s;
+    }
+  }
+  &_radio-input:checked ~ &_radio-label &_radio-button::after{
+    opacity: 1;
+  }
+
+}

@@ -1,0 +1,354 @@
+//CARD ONE
+
+.card {
+  
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+  position: relative;
+
+  &_side {
+    height: 50rem;
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    overflow: hidden; //this prevents image from overlapping on parent
+
+    &-one {
+      box-shadow: 0 2rem 2rem rgba(black,.3);
+      background-color: white;
+
+      &-1 {}
+    }
+
+    &-two {
+      text-align: center;
+      transform: rotateY(180deg);
+      box-shadow: 0 2rem 2rem rgba(black,.3);
+
+      &-2 {
+        background-image: linear-gradient(to right bottom,rgba(#00A8CC,.8),rgba(#4D089A,.9));
+      }
+    }
+  }
+
+  &:hover &_side-one {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &_side-two {
+    transform: rotateY(0);
+  }
+
+  &_img {
+    background-image: linear-gradient(to right bottom,#00A8CC,#4D089A),url("../img/nat-5.jpg");
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &_title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    background-image: linear-gradient(to right bottom,rgba(#00A8CC,.8),rgba(#4D089A,.8));
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    width: 55%;
+  }
+
+  &_title-span1 {
+    padding: 1rem 1.5rem;
+  }
+
+  &_title-span2 {
+    padding: 1rem 1.5rem;
+  }
+
+  &_text {
+    ul {
+      list-style: none;
+      width: 80%;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+
+  &_cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+  }
+
+  &_price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: white;
+
+  }
+  &_price-only {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+  }
+  &_price-value{
+    color: inherit;
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}
+////////////////////////////////CARD TWO
+
+.card2 {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+  position: relative;
+
+  &_side {
+    height: 50rem;
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    overflow: hidden; //this prevents image from overlapping on parent
+
+    &-one {
+      box-shadow: 0 2rem 2rem rgba(black,.3);
+      background-color: white;
+
+      &-1 {}
+    }
+
+    &-two {
+      text-align: center;
+      transform: rotateY(180deg);
+      box-shadow: 0 2rem 2rem rgba(black,.3);
+
+      &-2 {
+        background-image: linear-gradient(to right bottom,rgba(#ffe75e,.7),rgba(#b7472a,.8));
+      }
+    }
+  }
+
+  &:hover &_side-one {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &_side-two {
+    transform: rotateY(0);
+  }
+
+  &_img {
+    background-image: linear-gradient(to right bottom,#ffe75e,#b7472a),url("../img/nat-7.jpg");
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &_title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    background-image: linear-gradient(to right bottom,rgba(#ffe75e,.8),rgba(#b7472a,.8));
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    width: 62%;
+  }
+
+  &_title-span1 {
+    padding: 1rem 1.5rem;
+  }
+
+  &_title-span2 {
+    padding: 1rem 1.5rem;
+  }
+
+  &_text {
+    ul {
+      list-style: none;
+      width: 80%;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+  &_cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+  }
+
+  &_price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: white;
+
+  }
+  &_price-only {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+  }
+  &_price-value{
+    color: inherit;
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}
+// ///////////////////////////CARD THREE
+
+.card3 {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  height: 50rem;
+  position: relative;
+
+  &_side {
+    height: 50rem;
+    font-size: 3rem;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 0.5rem;
+    overflow: hidden; //this prevents image from overlapping on parent
+
+    &-one {
+      box-shadow: 0 2rem 2rem rgba(black,.3);
+      background-color: white;
+
+      &-1 {}
+    }
+
+    &-two {
+      text-align: center;
+      transform: rotateY(180deg);
+      box-shadow: 0 2rem 2rem rgba(black,.3);
+
+      &-2 {
+        background-image: linear-gradient(to right bottom,rgba(#79bac1,.8),rgba(#527318,.9));
+      }
+    }
+  }
+
+  &:hover &_side-one {
+    transform: rotateY(-180deg);
+  }
+
+  &:hover &_side-two {
+    transform: rotateY(0);
+  }
+
+  &_img {
+    background-image: linear-gradient(to right bottom,#79bac1,#527318),url("../img/nat-6.jpg");
+    background-blend-mode: screen;
+    background-size: cover;
+    background-position: center;
+    height: 45%;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  &_title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    top: 12rem;
+    right: 2rem;
+    background-image: linear-gradient(to right bottom,rgba(#79bac1,.8),rgba(#527318,.8));
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+    width: 58%;
+  }
+
+  &_title-span1 {
+    padding: 1rem 1.5rem;
+  }
+
+  &_title-span2 {
+    padding: 1rem 1.5rem;
+  }
+
+  &_text {
+    ul {
+      list-style: none;
+      width: 80%;
+
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 1rem;
+      }
+    }
+  }
+  &_cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+  }
+
+  &_price-box {
+    text-align: center;
+    margin-bottom: 8rem;
+    color: white;
+
+  }
+  &_price-only {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+
+  }
+  &_price-value{
+    color: inherit;
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}
+//----------------------------------------------------------------
